@@ -1,0 +1,12 @@
+.cloud {
+  color: var(--white-color);
+  .grid {
+    grid-template-columns: 4fr 3fr;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .btn {
+    background-color: var(--warning-color);
+  }
+}

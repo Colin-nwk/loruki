@@ -1,0 +1,42 @@
+.navbar {
+  background-color: var(--info-color);
+  height: 7rem;
+
+  .flex {
+    justify-content: space-between;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+  .logo {
+    color: var(--white-color);
+  }
+
+  ul {
+    display: flex;
+    @include respond(phone) {
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  a {
+    color: var(--white-color);
+    padding: 1rem;
+    margin: 0 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 2px solid var(--white-color);
+      transform-origin: center;
+    }
+  }
+  h2 {
+    color: var(--white-color);
+  }
+  @include respond(phone) {
+    height: 12rem;
+  }
+}

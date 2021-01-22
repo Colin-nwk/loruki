@@ -1,0 +1,23 @@
+.stats {
+  padding-top: 10rem;
+  animation: slideInFromBottom 1s ease-in;
+
+  &-heading {
+    max-width: 50rem;
+    margin: auto;
+  }
+
+  .grid {
+    h3 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}

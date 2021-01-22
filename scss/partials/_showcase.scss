@@ -1,0 +1,86 @@
+.showcase {
+  height: 40rem;
+  background-color: var(--info-color);
+  color: var(--white-color);
+  position: relative;
+
+  p {
+    margin: 2rem 0;
+  }
+
+  .grid {
+    grid-template-columns: 55% 45%;
+    gap: 3rem;
+    overflow: visible;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &-form {
+    position: relative;
+    top: 6rem;
+    height: 39rem;
+    width: 40rem;
+    padding: 4rem;
+    z-index: 100;
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+    @include respond(tab-port) {
+      justify-self: center;
+      margin: auto;
+    }
+    @include respond(phone) {
+      animation: slideInFromBottom 1s ease-in;
+    }
+
+    .form-control {
+      margin: 3rem 0;
+    }
+    input {
+      border: 0;
+      border-bottom: 1px solid #b4becb;
+      width: 100%;
+      padding: 3px;
+      font-size: 1.6rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn {
+      width: 100%;
+      background-color: var(--success-color);
+    }
+  }
+  &-text {
+    animation: slideInFromLeft 1s ease-in;
+    @include respond(tab-port) {
+      margin-top: 5rem;
+      text-align: center;
+    }
+    @include respond(phone) {
+      animation: slideInFromTop 1s ease-in;
+    }
+    .btn {
+      margin-top: 1rem;
+      background-color: var(--info-color);
+      border: 1px solid var(--white-color);
+    }
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 10rem;
+    bottom: -5rem;
+    right: 0;
+    left: 0;
+    background-color: var(--white-color);
+    transform: skewY(-3deg);
+  }
+  @include respond(tab-port) {
+    height: auto;
+  }
+}

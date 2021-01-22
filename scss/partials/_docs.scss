@@ -1,0 +1,64 @@
+.bg-light {
+  background: var(--gray-3-color);
+}
+
+.docs-head {
+  color: var(--white-color);
+  img {
+    width: 20rem;
+    justify-self: flex-end;
+    @include respond(tab-port) {
+      justify-self: center;
+    }
+  }
+  @include respond(tab-port) {
+    text-align: center;
+  }
+}
+
+.docs-main {
+  h3 {
+    margin: 2rem 0;
+  }
+  .link {
+    color: var(--white-color);
+  }
+  .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  nav li {
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+
+  .alert {
+    color: var(--white-color);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+
+code,
+pre {
+  background: #333;
+  color: var(--white-color);
+  padding: 1rem;
+}
